@@ -1,0 +1,25 @@
+[Unit]
+Description=rabbit 3
+Required=docker.service
+After=docker.service
+
+[Service]
+ExecStartPre=-docker stop -t 10 rabbit3
+ExecStartPre=-docker kill rabbit3
+ExecStartPre=-docker rm rabbit3
+ExecStartPre=docker pull rabbitmq:3
+
+# RABBIT_MQ_URL=amqp://guest:guest@localhost:5672
+
+ExecStart=docker run \
+  --h my_rabbit \
+  --netword host \
+  rabbit:3
+
+ExecStop=docker stop -t 10 rabbit3
+StandardOutput=syslog
+StandardError=syslog
+TimeoutStartSec=0
+Restart=always
+RestartSec=5s
+KillMode=none

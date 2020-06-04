@@ -4,6 +4,7 @@ Required=docker.service
 After=docker.service
 
 [Service]
+ExecStartPre=-mkdir /var/run/mysqld/
 ExecStartPre=chown systemd-coredump:systemd-coredump -R /var/run/mysqld/
 ExecStartPre=-docker stop -t 10 mysql56
 ExecStartPre=-docker kill mysql56
