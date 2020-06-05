@@ -12,9 +12,10 @@ ExecStartPre=docker pull rabbitmq:3
 # RABBIT_MQ_URL=amqp://guest:guest@localhost:5672
 
 ExecStart=docker run \
-  --h my_rabbit \
-  --netword host \
-  rabbit:3
+  --name rabbit3 \
+  -h my_rabbit \
+  --network host \
+  rabbitmq:3
 
 ExecStop=docker stop -t 10 rabbit3
 StandardOutput=syslog

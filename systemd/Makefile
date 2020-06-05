@@ -1,3 +1,5 @@
+start_all: start_ch start_mysql start_postgres12 start_rabbit3
+
 reload:
 	sudo systemctl daemon-reload
 
