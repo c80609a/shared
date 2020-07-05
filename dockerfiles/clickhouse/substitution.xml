@@ -1,0 +1,13 @@
+<yandex>
+  <mysql_conf>
+    <port>3306</port>
+    <user>root</user>
+    <password>mysql_strong_password</password>
+    <replica>
+      <host>mysql</host>
+      <priority>1</priority>
+    </replica>
+    <db>cpa</db>
+  </mysql_conf>
+  <listen_host>0.0.0.0</listen_host>
+</yandex>

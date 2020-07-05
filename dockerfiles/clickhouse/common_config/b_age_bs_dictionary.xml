@@ -1,0 +1,28 @@
+<yandex>
+  <include_from>/etc/clickhouse-server/substitution.xml</include_from>
+  <dictionary>
+    <name>b_age_bs</name>
+    <source>
+      <mysql incl="mysql_conf">
+        <table>b_age_bs</table>
+      </mysql>
+    </source>
+    <lifetime>
+      <min>3600</min>
+      <max>7200</max>
+    </lifetime>
+    <layout>
+      <flat/>
+    </layout>
+    <structure>
+      <id>
+        <name>id</name>
+      </id>
+      <attribute>
+        <name>name</name>
+        <type>String</type>
+        <null_value>Undefined</null_value>
+      </attribute>
+    </structure>
+  </dictionary>
+</yandex>

@@ -1,0 +1,33 @@
+<yandex>
+  <include_from>/etc/clickhouse-server/substitution.xml</include_from>
+  <dictionary>
+    <name>smart_templates</name>
+    <source>
+      <mysql incl="mysql_conf">
+        <table>smart_templates</table>
+      </mysql>
+    </source>
+    <lifetime>
+      <min>60</min>
+      <max>120</max>
+    </lifetime>
+    <layout>
+      <flat/>
+    </layout>
+    <structure>
+      <id>
+        <name>id</name>
+      </id>
+      <attribute>
+        <name>name</name>
+        <type>String</type>
+        <null_value>Undefined</null_value>
+      </attribute>
+      <attribute>
+        <name>old_name</name>
+        <type>String</type>
+        <null_value>Undefined</null_value>
+      </attribute>
+    </structure>
+  </dictionary>
+</yandex>

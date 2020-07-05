@@ -1,0 +1,28 @@
+<yandex>
+  <include_from>/etc/clickhouse-server/substitution.xml</include_from>
+  <dictionary>
+    <name>cpas</name>
+    <source>
+      <mysql incl="mysql_conf">
+        <table>cpas</table>
+      </mysql>
+    </source>
+    <lifetime>
+      <min>300</min>
+      <max>360</max>
+    </lifetime>
+    <layout>
+      <flat/>
+    </layout>
+    <structure>
+      <id>
+        <name>id</name>
+      </id>
+      <attribute>
+        <name>name</name>
+        <type>String</type>
+        <null_value>Undefined</null_value>
+      </attribute>
+    </structure>
+  </dictionary>
+</yandex>
