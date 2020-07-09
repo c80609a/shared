@@ -2,12 +2,9 @@
   <mysql_conf>
     <port>3306</port>
     <user>root</user>
-    <password>mysql_strong_password</password>
-    <replica>
-      <host>mysql</host>
-      <priority>1</priority>
-    </replica>
+    <password>koi8rus</password>
     <db>cpa</db>
+    <host>172.17.0.2</host>
   </mysql_conf>
-  <listen_host>0.0.0.0</listen_host>
+  <listen_host>::</listen_host>
 </yandex>
