@@ -11,7 +11,9 @@ ExecStartPre=-docker kill mysql56
 ExecStartPre=-docker rm mysql56
 ExecStartPre=docker pull mysql:5.6
 
-#  -v /home/scout/Documents/getboat/home/getboat/dump:/dump2 
+#  info:    -v /home/scout/Documents/getboat/home/getboat/dump:/dump2 
+#  check:   SHOW VARIABLES LIKE 'datadir'; 
+#  check:   l /home/scout/.local/opt/lib/mysql
 
 ExecStart=docker run \
   --name mysql56 \
