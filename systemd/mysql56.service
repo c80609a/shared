@@ -15,6 +15,13 @@ ExecStartPre=docker pull mysql:5.6
 #  check:   SHOW VARIABLES LIKE 'datadir'; 
 #  check:   l /home/scout/.local/opt/lib/mysql
 
+## Как включить general log:
+#
+#  * включаем general log в mysqld.cnf
+#  * создаём файл general.log
+#  * указываем права sudo chown systemd-coredump:systemd-coredump .local/usr/log/general.log
+#  * перезапускаем контейнер
+
 ExecStart=docker run \
   --name mysql56 \
   -p 3306:3306 \
